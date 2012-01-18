@@ -149,12 +149,6 @@ public class FitnesseResults extends TestResult implements Comparable<FitnesseRe
 	}
 
 	@Override
-	public Result getBuildResult() {
-		if (getFailCount() > 0) return Result.FAILURE;
-		return null;
-	}
-
-	@Override
 	public float getDuration() {
 		if (!durationCalculated) calculateDurationInMillis();
 		return durationInMillis / 1000.0f;
